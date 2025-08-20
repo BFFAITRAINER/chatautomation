@@ -1,0 +1,109 @@
+{
+  "info": {
+    "name": "BFF Middleware v24",
+    "_postman_id": "bff-2025-08-20T03:15:30.650052",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daily BFF Report",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-bff-key",
+            "value": "{{bffKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/cron/daily-bff-report",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "cron",
+            "daily-bff-report"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Publish (Ocoya)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-bff-key",
+            "value": "{{bffKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"channel\": \"linkedin\",\n  \"text\": \"Hello from BFF Middleware v24!\",\n  \"media_url\": null,\n  \"schedule_iso\": null,\n  \"tags\": [\n    \"bff\",\n    \"launch\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/social/publish-ocoya",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "social",
+            "publish-ocoya"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Systeme Contact",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-bff-key",
+            "value": "{{bffKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"first_name\": \"Test\",\n  \"last_name\": \"User\",\n  \"tags\": [\n    \"lead_blueprint\"\n  ],\n  \"campaign_id\": null\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/systeme/contact",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "systeme",
+            "contact"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    },
+    {
+      "key": "bffKey",
+      "value": "change-me"
+    }
+  ]
+}
