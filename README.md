@@ -1,6 +1,6 @@
-HEAD
 # chatautomation
 Social Chatbot
+
 # BFF Middleware v24 (FastAPI)
 
 **Deploy target:** Render (replace your existing service or create a new one).  
@@ -50,4 +50,3 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 - Ocoya & Systeme calls are **stubs**—replace with the real API URLs/fields when ready.
 - Keep keys on the server only. GPTs call the middleware, **never** external APIs directly.
 - CRIS orchestrates which `/gpt/*` to call per task.
- 0c6b1fd (Initial commit)
