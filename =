@@ -1,0 +1,19 @@
+# ChatAutomation - FastAPI + Google OAuth App
+
+This project is a middleware service built using **FastAPI**, integrated with **Google OAuth 2.0**, and designed for deployment via **Render**. It includes endpoints for authentication and supports API testing through **Postman**.
+
+---
+
+## 🚀 Features
+
+- ✅ FastAPI backend
+- ✅ Google OAuth 2.0 login
+- ✅ `.env` for secure config
+- ✅ Auto-deployment with Render
+- ✅ GitHub version control
+- ✅ Postman collection for testing
+
+---
+
+## 📁 Project Structure
+
