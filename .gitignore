@@ -1,20 +1,11 @@
 # Virtual envs
 .venv/
 .venv311/
-venv/
-ENV/
-env/
-
-# Python cache / compiled
-__pycache__/
+venv/__pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pdb
 *.egg-info/
-.eggs/
-.build/
-
-# Editors
+.eggs/# Editors
 .vscode/
 .idea/
